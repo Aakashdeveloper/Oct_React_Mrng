@@ -4,3 +4,80 @@ using component based structure
 
 NPM 
 > node package manager
+
+
+packages
+generate react app 
+
+>>>>>>>>>>>>>>>>>
+First File in The application
+<<<<<<<<<<
+package.json
+> start File
+> all the packages
+> script (start, test , build )
+> meta data
+
+JSON
+> JavaScript Object Notation
+(way to represent the data, key value pair of data)
+[
+    {
+        "name":"John",
+        "class":"First"
+    },
+    {
+        "name":"Alvin",
+        "class":"First"
+    }
+]
+
+var a  =   {
+        "name":"John",
+        "class":"First"
+    }
+
+///////////
+Step to Generate Package.json()
+///////////////
+
+**NodeJs must be installed in system
+> navigate to the folder using Cmd/Terminal
+> npm init
+> Answer all the questions
+> Type 'yes'
+
+////////////
+Step To Install packages
+//////////
+>  navigate to the folder using Cmd/Terminal
+> npm i packagename / npm install packagename / npm i packagename --save
+
+
+> to install all dependency in one go
+> npm i
+
+/////////
+Step to generate React app
+///////////////
+#Window
+>>>>>>One Time for One system<<<<<<
+
+> open the cmd as admin 
+> npm i -g create-react-app 
+
+>>>>>Next EveryTime You want to generate application<<<<<<<<
+> Go inside folder using simple cmd 
+> create-react-app appname
+
+##############################################
+
+#Mac/Linux
+>>>>>>One Time for One system<<<<<<
+
+> open the terminal
+> sudo npm i -g create-react-app 
+
+>>>>>Next EveryTime You want to generate application<<<<<<<<
+> Go inside folder using simple cmd 
+> create-react-app appname
