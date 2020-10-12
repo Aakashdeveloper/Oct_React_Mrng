@@ -126,6 +126,30 @@ component
 "react-scripts": "3.4.3" > it help to run the application
 
 
-functionol component
+functional component
+> dumb component
+> They are mainly use for display puropse only
+> They cannot maintain the state
+> They are light in weight
+
 class component
+> Logical component
+> they are use to maintain the state and call logic and API
+> They can maintain the state
+> They are heavy as compare to functional
+
+
+component A    =====>        Component B
+state of a      Props        state of b
+
+
 hooks component
+
+state
+> is a local variable
+> any data interaction will happen from state only
+> state value can be updated
+
+props
+> help to transfer the data
+> cannot update the value
