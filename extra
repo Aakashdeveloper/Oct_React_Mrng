@@ -1,3 +1,30 @@
+Basic JavaScript
+Npm
+React = 3
+Basic React Native=1
+React_hooks -1
+React-Redux =2
+React-GarphQL 1
+React-JWT(Login Logut)-1
+React-Saga -1
+Depolyment
+-> MERN
+-> Docker
+-> Nginx
+-> heroku
+
+Testing
+
+Mock API
+json-server
+
+Github
+
+--------NOT--------------
+API
+GarphQL
+Login/Logout
+
 React
 >React is a frontend framework that help to build single page application 
 using component based structure
@@ -81,3 +108,24 @@ Step to generate React app
 >>>>>Next EveryTime You want to generate application<<<<<<<<
 > Go inside folder using simple cmd 
 > create-react-app appname
+
+
+>>>>>>>>>>>
+Folder walkthrough
+function
+let/var/const
+component 
+
+>>>>>>>Step to Start application<<<<<
+> navigate to the folder using cmd/terminal
+> npm start
+> http://localhost:3000
+
+"react": "^16.13.1", > its a main lib
+"react-dom": "^16.13.1",> it help to render content on the screen   JSX
+"react-scripts": "3.4.3" > it help to run the application
+
+
+functionol component
+class component
+hooks component
