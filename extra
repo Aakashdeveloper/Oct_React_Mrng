@@ -153,3 +153,17 @@ state
 props
 > help to transfer the data
 > cannot update the value
+> props can be pass only if component is nested
+
+var data = {
+    a:1,
+    b:2
+}
+
+
+data:data
+data
+
+map
+filter
+indexof
