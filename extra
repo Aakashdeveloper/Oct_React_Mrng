@@ -167,3 +167,8 @@ data
 map
 filter
 indexof
+
+
+///////
+parent => child  === use props
+child => parent  === use props with function (callback function)
