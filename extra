@@ -1,5 +1,7 @@
 Basic JavaScript
 Npm
+Github
+////////////////
 React = 3
 Basic React Native=1
 React_hooks -1
@@ -18,7 +20,7 @@ Testing
 Mock API
 json-server
 
-Github
+
 
 --------NOT--------------
 API
@@ -175,7 +177,6 @@ child => parent  === use props with function (callback function)
 
 https://www.w3schools.com/bootstrap/bootstrap_navbar.asp
 
-
 Grid Basic
 Tables
 Buttons
@@ -184,3 +185,38 @@ Navbar
 
 Modal
 Carousel
+
+
+/////Setup username & email global/////
+git config --global user.name "Aakashdeveloper"
+git config --global user.email ahanda205@gmail.com
+
+
+////First Time from new folder///
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/Aakashdeveloper/mytestrepo.git
+git push -u origin master
+
+////All next Time from  folder///
+git add .
+git commit -m "first commit"
+git push
+
+git pull
+:wq!
+
+/////////
+git checkout -b myfeature
+git add .
+git commit -m "component"
+git push -u origin myfeature
+
+https://github.com/Aakashdeveloper/mytestrepo.git
+
+///////////////////////
+npm i react-router-dom
+
+sessionstorage
+localstorage
