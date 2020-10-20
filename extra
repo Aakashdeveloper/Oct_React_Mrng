@@ -233,3 +233,6 @@ https://developerfunnel.herokuapp.com/hotellist/1?hcost=1000&lcost=500
 (get)  triptype> https://developerfunnel.herokuapp.com/booking
 (get)  bookingdetails > https://developerfunnel.herokuapp.com/allBooking
 (post) placebooking >  https://developerfunnel.herokuapp.com/placeBook
+
+
+npm i axios react-router-dom react-tabs
