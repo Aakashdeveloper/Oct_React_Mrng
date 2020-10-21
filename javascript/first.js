@@ -62,3 +62,14 @@ function add(a,b){
 
 add(1,2)
 
+
+var a = [1,2]
+a.map((test) => {test*2})
+
+
+var a = 10
+var b = "my age is "+a
+"my age is 10"
+
+var b = `my age is ${a}`
+"my age is 10"
