@@ -61,7 +61,7 @@ class Details extends Component{
                         <br/>
                         <div>
                             <Link to="/" className="btn btn-danger">Back</Link>&nbsp;
-                            <Link to="/" className="btn btn-success">Place Order</Link>
+                            <Link to={`/booking/${details._id}`} className="btn btn-success">Place Order</Link>
                         </div>
                     </div>
                 </div>
