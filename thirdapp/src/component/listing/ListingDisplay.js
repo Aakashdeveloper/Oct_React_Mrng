@@ -1,12 +1,15 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import './Listing.css';
+import Pagination from "react-js-pagination";
 
-const ListingDisplay =(props) => {
-
-    const renderList = ({listData}) => {
-        if(listData){
-            return listData.map((item) => {
+const renderList = (props,data) => {
+    if(data){
+        if(data.length>0){
+            var limit = props.limit;
+            var page = props.activePage;
+            data = data.slice((page-1)*limit,(page-1)*limit+limit)
+            return data.map((item) => {
                 return(
                     <div className="item">
                         <div className="row">
@@ -38,28 +41,63 @@ const ListingDisplay =(props) => {
             })
         }else{
             return(
-                <div className="item">
-                    <div className="row row-height">
-                        <div className="col-md-3">
-                            <img src="/images/loader.gif"/>
-                        </div>
-                    </div>
+                <div>
+                    <center>
+                        <h3>No Hotel Found</h3>
+                    </center>
                 </div>
             )
         }
+        
+    }else{
+        return(
+            <div className="item">
+                <div className="row row-height">
+                    <div className="col-md-3">
+                        <img src="/images/loader.gif"/>
+                    </div>
+                </div>
+            </div>
+        )
     }
+}
 
+const handlePageChange=(props,pageNumber)=>{
+    props.pageNumber(pageNumber);
+    var data = props.listData;
+    renderList(props,data)
+}
+
+const ListingDisplay =(props) => {
     return(
         <div className="container">
             <div className="main-heading">
                 <div className="row">
                     <div className="col-md-12">
-                        {renderList(props)}
+                        {renderList(props,props.listData)}
                     </div>
                 </div>
+                <center>
+                    <Pagination
+                        activePage={props.activePage}
+                        itemsCountPerPage={3}
+                        totalItemsCount={props.totalNoOfItems}
+                        pageRangeDisplayed={5}
+                        itemClass="page-item"
+                        linkClass="page-link"
+                        onChange={(data) => {handlePageChange(props,data)}}
+                    />
+                </center>
             </div>
         </div>
     )
 }
 
 export default ListingDisplay;
+
+
+/*
+ ((0*3),(0+3))  slice(0,3)
+            ((3,6)) => slice(3,6)
+            (6,9) => slice(6,9)
+*/

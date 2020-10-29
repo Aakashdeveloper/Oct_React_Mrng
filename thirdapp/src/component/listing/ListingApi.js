@@ -6,12 +6,15 @@ import CostFilter from '../filters/costFilter';
 
 const url = "https://developerfunnel.herokuapp.com/hotellist";
 
+var limit =4
 class Listing extends Component{
     constructor(){
         super()
 
         this.state={
-            hotellist:''
+            hotellist:'',
+            activePage:1,
+            totalNoOfItems:1
         }
     }
 
@@ -27,7 +30,7 @@ class Listing extends Component{
                    <CostFilter costperType={(data) => {this.setDataAsPerFilter(data)}}/>
                 </div>
                 <div className="col-md-10">
-                    <ListingDisplay listData={this.state.hotellist}/>
+                    <ListingDisplay listData={this.state.hotellist} activePage={this.state.activePage} limit={limit} totalNoOfItems={this.state.totalNoOfItems} pageNumber={(data) => {this.setState({activePage:data})}}/>
                 </div>
                 
             </div>
@@ -37,9 +40,14 @@ class Listing extends Component{
     componentDidMount(){
         console.log(this.props);
         sessionStorage.setItem('tripid',this.props.match.params.id)
-        axios.get(`${url}/${this.props.match.params.id}`)
-        .then((response) => { 
-            this.setState({hotellist:response.data})
+        //axios.get(`${url}/${this.props.match.params.id}`)
+        fetch((`${url}/${this.props.match.params.id}`))
+        .then((res) => res.json())
+        .then((data) => { 
+            this.setState({
+                hotellist:data.slice(0,data.length-1),
+                totalNoOfItems:data.length-1
+            })
         })
     }
 
