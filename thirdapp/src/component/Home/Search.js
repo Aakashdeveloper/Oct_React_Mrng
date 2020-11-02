@@ -20,7 +20,7 @@ class Search extends Component{
         if(data){
             return data.map((item) => {
                 return(
-                    <option value={item.city}>
+                    <option value={`${item.city},${item.city_name}`}>
                         {item.city_name}
                     </option>
                 )
@@ -42,10 +42,20 @@ class Search extends Component{
 
     handleCity=(event) => {
         console.log(event.target.value)
-        fetch(`${hotelurl}${event.target.value}`,{method:'GET'})
+        var data = (event.target.value).split(',');
+        var cityId = data[0];
+        var cityName = data[1];
+        fetch(`${hotelurl}${cityId}`,{method:'GET'})
         .then((response) => response.json())
         .then((data) => {
             this.setState({hotel:data})
+        })
+
+        var url = `http://api.openweathermap.org/data/2.5/forecast/daily?q=${cityName}&mode=json&units=metric&cnt=1&appid=fbf712a5a83d7305c3cda4ca8fe7ef29`;
+        fetch(`${url}`,{method:'GET'})
+        .then((res) => res.json())
+        .then((data) => {
+            sessionStorage.setItem('currentWeather',data.list[0].temp.day);
         })
     }
 

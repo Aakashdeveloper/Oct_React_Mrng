@@ -3,6 +3,7 @@ import axios from 'axios';
 import ListingDisplay from './ListingDisplay';
 import RoomFilter from '../filters/roomFilter';
 import CostFilter from '../filters/costFilter';
+import SuggestBlock from './suggestionBlock';
 
 const url = "https://developerfunnel.herokuapp.com/hotellist";
 
@@ -30,6 +31,7 @@ class Listing extends Component{
                    <CostFilter costperType={(data) => {this.setDataAsPerFilter(data)}}/>
                 </div>
                 <div className="col-md-10">
+                    <SuggestBlock/>
                     <ListingDisplay listData={this.state.hotellist} activePage={this.state.activePage} limit={limit} totalNoOfItems={this.state.totalNoOfItems} pageNumber={(data) => {this.setState({activePage:data})}}/>
                 </div>
                 
