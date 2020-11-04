@@ -3,16 +3,16 @@ Npm
 Github
 React = 3
 React-JWT(Login Logout)-1
+Depolyment
+-> MERN
+-> Docker
+-> heroku
 ////////////////
 React_hooks -1
 Basic React Native=1
 React-GarphQL 1
 React-Saga -1
-Depolyment
--> MERN
--> Docker
 -> Nginx
--> heroku
 React-Redux =2
 Testing
 
@@ -258,3 +258,14 @@ withRouter
 (GET) => http://localhost:5000/api/auth/userinfo
 (Header) => {'x-access-token':'token value from login'}
 (response) => {userinfo}
+
+////////////////
+Production
+////////////
+npm run build
+
+https://www.youtube.com/c/DeveloperFunnel/videos?view_as=subscriber
+
+
+docker build . -t imagename
+docker run -p 8760:3000 imagename

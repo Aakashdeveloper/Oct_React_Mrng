@@ -15,6 +15,10 @@ class Profile extends Component {
         this.props.history.push('/login')
     }
     render(){
+        if(sessionStorage.getItem('ltk') == null){
+            this.props.history.push('/login')
+        }
+        sessionStorage.setItem('rtk',this.state.user.role)
         return(
             <div className="panel panel-warning">
                 <div className="panel-heading">
