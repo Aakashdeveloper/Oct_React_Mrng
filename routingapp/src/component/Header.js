@@ -19,6 +19,7 @@ const Header = () => {
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/post">Post</Link></li>
                         <li><Link to="/profile">Profile</Link></li>
+                        <li><Link to="/lifeCycle">LifeCycle</Link></li>
                     </ul>
                     <ul className="nav navbar-nav navbar-right">
                         <li><a href="#"><span className="glyphicon glyphicon-user"></span> Sign Up</a></li>

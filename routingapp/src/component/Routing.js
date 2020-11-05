@@ -6,6 +6,7 @@ import {BrowserRouter,Route} from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer'
 import PostDetails from './PostDetails';
+import LifeCycle from './LifeCycle';
 
 const Routing = () => {
     return(
@@ -16,6 +17,7 @@ const Routing = () => {
                 <Route path="/post" component={Post}/>
                 <Route path="/details/:topic" component={PostDetails}/>
                 <Route path="/profile" component={Profile}/>
+                <Route path="/lifeCycle" component={LifeCycle}/>
                 <Footer/>
             </div>
         </BrowserRouter>
