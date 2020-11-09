@@ -7,20 +7,16 @@ Depolyment
 -> MERN
 -> Docker
 -> heroku
+React-GarphQL-1
+Mock API
+json-server
 ////////////////
 React_hooks -1
 Basic React Native=1
-React-GarphQL 1
 React-Saga -1
 -> Nginx
 React-Redux =2
 Testing
-
-Mock API
-json-server
-
-
-
 --------NOT--------------
 API
 GarphQL
@@ -270,3 +266,21 @@ https://www.youtube.com/c/DeveloperFunnel/videos?view_as=subscriber
 docker build . -t imagename
 docker run -p 8760:3000 imagename
 https://www.youtube.com/c/DeveloperFunnel/videos?view_as=subscriber
+
+/////////
+Mock api
+////////
+install > npm i -g json-server 
+json-server --watch db.json --port 8900
+npm i apollo-boost apollo-graphql graphql graphql-tag react-apollo
+
+
+////////Native App///////
+npm i -g create-react-native-app 
+create-react-native-app appname
+> npm run web
+
+> npm i -g expo-cli
+expo-client
+
+> download expo app in mobile 
