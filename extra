@@ -287,3 +287,10 @@ create-react-native-app appname
 expo-client
 
 > download expo app in mobile 
+
+
+Redux
+> State management
+> pass data to non nested component
+
+npm i redux react-redux redux-logger prop-types
