@@ -294,3 +294,10 @@ Redux
 > pass data to non nested component
 
 npm i redux react-redux redux-logger prop-types
+
+
+mul(5)(6)
+mul(5,6)
+
+npm i redux react-redux react-router-dom react-slick redux-logger redux-promise prop-types
+npm i enzyme enzyme-adapter-react-16 react-test-renderer react-addons-test-utils
