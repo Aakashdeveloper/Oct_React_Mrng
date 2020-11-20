@@ -7,16 +7,17 @@ Depolyment
 -> MERN
 -> Docker
 -> heroku
+-> Nginx
 React-GarphQL-1
 Mock API
 json-server
 React_hooks -1
 Basic React Native=1
-////////////////
 React-Redux =2
+////////////////
 React-Saga -1
--> Nginx
 Testing
+
 --------NOT--------------
 API
 GarphQL
