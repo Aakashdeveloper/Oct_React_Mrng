@@ -14,7 +14,6 @@ json-server
 React_hooks -1
 Basic React Native=1
 React-Redux =2
-////////////////
 React-Saga -1
 Testing
 
@@ -302,3 +301,29 @@ mul(5,6)
 
 npm i redux react-redux react-router-dom react-slick redux-logger redux-promise prop-types
 npm i enzyme enzyme-adapter-react-16 react-test-renderer react-addons-test-utils
+
+
+function loop(ui){
+    for(i=0;i<ui;i++){
+        console.log(i)
+    }
+}
+
+function * loop(ui){
+    for(i=0;i<ui;i++){
+        yield i
+    }
+}
+undefined
+loop(3)
+loop {<suspended>}
+var data = loop(3)
+undefined
+data.next()
+{value: 0, done: false}
+data.next()
+{value: 1, done: false}
+data.next()
+{value: 2, done: false}
+data.next()
+{value: undefined, done: true}
